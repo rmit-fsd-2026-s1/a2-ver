@@ -4,7 +4,7 @@ node_modules/
 out/
 build/
 .vercel
-*.log
+*.rlog
 npm-debug.log*
 yarn-debug.log*
 
