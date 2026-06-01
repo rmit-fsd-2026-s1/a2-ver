@@ -1,34 +1,23 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
+import dotenv from "dotenv";
 
-const dbConfig = {
-  host: "santha26.cn2ems8y2mfe.ap-southeast-2.rds.amazonaws.com",
-  port: 1433,
-  username: "s4060865",
-  password: "Sht20050212@",
-  database: "s4060865",
-};
-
-// Debug only: do not print the real password
-console.log("DB_HOST:", dbConfig.host);
-console.log("DB_PORT:", dbConfig.port);
-console.log("DB_USERNAME:", dbConfig.username);
-console.log("DB_DATABASE:", dbConfig.database);
-console.log("HAS_PASSWORD:", !!dbConfig.password);
+dotenv.config();
 
 export const AppDataSource = new DataSource({
   type: "mssql",
 
-  host: dbConfig.host,
-  port: dbConfig.port,
-  username: dbConfig.username,
-  password: dbConfig.password,
-  database: dbConfig.database,
+  host: process.env.DB_HOST,
+  port: Number(process.env.DB_PORT) || 1433,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
 
   synchronize: false,
   logging: true,
 
   entities: [],
+
   migrations: [],
   subscribers: [],
 
