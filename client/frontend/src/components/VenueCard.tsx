@@ -32,7 +32,7 @@ export default function VenueCard({
       {hasImage ? (
         <div className="relative h-52 w-full">
           <Image
-            src={`/${venue.image}`}
+            src={venue.image}
             alt={venue.name}
             fill
             className="object-cover"
