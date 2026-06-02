@@ -10,7 +10,7 @@ interface Venue {
   recommendedSuitability: string;
   description: string;
   status: "available" | "booked" | "unavailable";
-  image: string; // URL or path to the venue image
+  image: "/venue1.jpg"; // URL or path to the venue image
 }
 
 type VenueCardProps = {

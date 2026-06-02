@@ -47,7 +47,7 @@ export default function Layout({
       style={{ backgroundColor: "#fffaf3" }}
     >
       {showHeader || showNavbar ? (
-        <div className="border-b border-black/10 bg-white">
+        <div className="relative z-10 border-b border-black/10 bg-white">
           <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 sm:px-5">
             {showHeader ? <Header title={headerTitle} /> : <div />}
             {showNavbar ? <Navbar 

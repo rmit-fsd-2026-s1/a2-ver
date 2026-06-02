@@ -17,7 +17,7 @@ export default function Home() {
     recommendedSuitability: string;
     description: string;
     status: "available" | "booked" | "unavailable";
-    image: string; // URL or path to the venue image
+    image: "/venue1.jpg"; // URL or path to the venue image
   }
 
   const venues: Venue[] = [
@@ -64,7 +64,11 @@ export default function Home() {
             label: "My Dashboard",
             href: currentUser.role === "hirer" ? "/hirer" : "/vendor",
           },
+          { label: "Log In", href: "/sign_in" },
+          { label: "Sign Up", href: "/sign_up" },
         ]
+
+
       : [
           { label: "Log In", href: "/sign_in" },
           { label: "Sign Up", href: "/sign_up" },

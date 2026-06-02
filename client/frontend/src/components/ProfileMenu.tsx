@@ -69,7 +69,7 @@ export default function ProfileMenu() {
             </Avatar.Root>
           </Button>
         </MenuTrigger>
-        <MenuContent bg="white" borderColor="gray.200" boxShadow="md">
+        <MenuContent bg="white" borderColor="gray.200" boxShadow="md" zIndex={1400}>
           <MenuItem value="profile" onClick={() => router.push("/profile")}>
             My Profile
           </MenuItem>
